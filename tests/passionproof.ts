@@ -1,5 +1,3 @@
-// pg (Playground), web3, anchor, and BN are globally available.
-// We do need an explicit import for spl-token client helpers though.
 import {
   TOKEN_2022_PROGRAM_ID,
   getAssociatedTokenAddressSync,
