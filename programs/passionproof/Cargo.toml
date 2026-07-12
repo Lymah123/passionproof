@@ -1,0 +1,22 @@
+[package]
+name = "passionproof"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "passionproof"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.31.1", features = ["init-if-needed"] }
+anchor-spl = { version = "0.31.1", features = ["token_2022", "token_2022_extensions", "metadata"] }
+spl-token-2022 = { version = "6", features = ["no-entrypoint"] }
+spl-type-length-value = "0.7"
+spl-pod = "0.5"
